@@ -5,6 +5,7 @@ import {
   TouchableWithoutFeedback,
   View,
   ViewStyle,
+  TouchableOpacity
 } from "react-native";
 import {
   Checkbox,
@@ -146,7 +147,7 @@ const DropDown = forwardRef<TouchableWithoutFeedback, DropDownPropsInterface>(
         onDismiss={onDismiss}
         theme={theme}
         anchor={
-          <TouchableRipple
+          <TouchableOpacity
             ref={ref}
             onPress={showDropDown}
             onLayout={onLayout}
@@ -166,7 +167,7 @@ const DropDown = forwardRef<TouchableWithoutFeedback, DropDownPropsInterface>(
                 {...inputProps}
               />
             </View>
-          </TouchableRipple>
+          </TouchableOpacity>
         }
         style={{
           maxWidth: inputLayout?.width,
